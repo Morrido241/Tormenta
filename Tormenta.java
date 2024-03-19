@@ -51,17 +51,16 @@ public class Tormenta extends Robot
 	 */
 	public void onHitWall(HitWallEvent e) {
 		// Replace the next line with any behavior you would like
-		turnRight(100);
+		turnRight(75);
 	}
 	public void	onHitRobot(HitRobotEvent event) {
 		// O que ele faz quando topar com um robo
 		double w = getBattleFieldWidth();
-		double face_ori = getHeading();
-		double gun_ori = getGunHeading();
-		while (face_ori != gun_ori) {
-			turnGunRight(1);
-		}
-		back(w/2);
+		turnGunLeft(90);
+		fire(1);
+		turnLeft(15);
+		back(w/4);
+		turnGunRight(90);
 	}
 	
 }
