@@ -15,17 +15,15 @@ public class Tormenta extends Robot
 	
 	public void run() {
 		// Initialization of the robot should be put here
-		double w = getBattleFieldWidth();
-		turnGunRight(90);
 		// After trying out your robot, try uncommenting the import at the top,
 		// and the next line:
-
+  turnGunRight(90);
 		// setColors(Color.red,Color.blue,Color.green); // body,gun,radar
-
+   
 		// Robot main loop
 		while(true) {
 			// Replace the next 4 lines with any behavior you would like
-			ahead(w/3);
+		 ahead(40);
 		}
 	}
 
@@ -58,8 +56,8 @@ public class Tormenta extends Robot
 		double w = getBattleFieldWidth();
 		turnGunLeft(90);
 		fire(1);
-		turnLeft(15);
-		back(w/4);
+		turnLeft(30);
+		back(20);
 		turnGunRight(90);
 	}
 	
